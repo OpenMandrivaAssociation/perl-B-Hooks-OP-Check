@@ -1,6 +1,6 @@
 %define module   B-Hooks-OP-Check
 %define version    0.15
-%define release    %mkrel 1
+%define release    %mkrel 2
 
 Name:       perl-%{module}
 Version:    %{version}
@@ -14,6 +14,7 @@ BuildRequires: perl-devel
 BuildRequires: perl(ExtUtils::Depends)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl-parent
+Requires:      perl-parent
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
