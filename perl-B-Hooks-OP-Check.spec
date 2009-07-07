@@ -1,5 +1,5 @@
 %define module   B-Hooks-OP-Check
-%define version    0.17
+%define version    0.18
 %define release    %mkrel 1
 
 Name:       perl-%{module}
