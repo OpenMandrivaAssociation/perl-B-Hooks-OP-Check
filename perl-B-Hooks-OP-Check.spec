@@ -1,21 +1,22 @@
-%define module   B-Hooks-OP-Check
-%define version    0.18
-%define release    %mkrel 1
+%define upstream_name    B-Hooks-OP-Check
+%define upstream_version 0.18
 
-Name:       perl-%{module}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Wrap OP check callbacks
-Url:        http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/B/%{module}-%{version}.tar.gz
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/B/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl-devel
 BuildRequires: perl(ExtUtils::Depends)
 BuildRequires: perl(ExtUtils::MakeMaker)
 BuildRequires: perl-parent
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 Requires:      perl-parent
-BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 This module provides a c api for XS modules to hook into the callbacks of
@@ -31,7 +32,7 @@ modules to use. Include the following in your Makefile.PL:
     );
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -53,4 +54,3 @@ rm -rf %buildroot
 %{_mandir}/man3/*
 %perl_vendorarch/B
 %perl_vendorarch/auto/B
-
