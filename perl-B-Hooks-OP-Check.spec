@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.19
-Release:	2
+Release:	3
 
 Summary:	Wrap OP check callbacks
 License:	GPL+ or Artistic
