@@ -11,6 +11,7 @@ Group:		Development/Perl
 Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/B/B-Hooks-OP-Check-0.19.tar.gz
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl(ExtUtils::Depends)
 BuildRequires:	perl(ExtUtils::MakeMaker)
