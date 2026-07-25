@@ -1,15 +1,15 @@
 %define upstream_name    B-Hooks-OP-Check
-%define upstream_version 0.19
+%define upstream_version 0.22
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version 0.19
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Wrap OP check callbacks
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/B/B-Hooks-OP-Check-0.19.tar.gz
+Url:		https://github.com/karenetheridge/B-Hooks-OP-Check
+Source0:	https://cpan.metacpan.org/authors/id/E/ET/ETHER/B-Hooks-OP-Check-0.22.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
