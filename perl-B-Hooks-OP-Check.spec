@@ -1,9 +1,7 @@
 %define upstream_name    B-Hooks-OP-Check
-%define upstream_version 0.22
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.22
+Release:	2
 
 Summary:	Wrap OP check callbacks
 License:	GPL+ or Artistic
@@ -32,7 +30,7 @@ modules to use. Include the following in your Makefile.PL:
     );
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -65,9 +63,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.180.0-1mdv2010.0
 + Revision: 402085
-- rebuild using %%perl_convert_version
-
-* Tue Jul 07 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.18-1mdv2010.0
+- rebuild using %0.22 Tue Jul 07 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.18-1mdv2010.0
 + Revision: 393192
 - update to new version 0.18
 
